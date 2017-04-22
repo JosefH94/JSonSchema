@@ -2,14 +2,14 @@
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "https://raw.githubusercontent.com/JosefH94/JSonSchema/master/MenuSchema.json",
   "title": "JSON Schema for Menu-JSON",
-  "description": "Schema für das Erstellen von Menüs",
+  "description": "Schema für das Erstellen von Menus",
   "definitions": {
     "ListOfLists": {
       "type": "object",
       "properties": {
         "title": {
           "type": "string",
-          "description": "Title des Menüpunktes"
+          "description": "Title des Menupunktes"
         },
         "link": {
           "type": "string",
@@ -24,7 +24,7 @@
         "lol": {
           "type": "array",
           "default": [],
-          "description": "Liste der Untermenüs",
+          "description": "Liste der Untermenus",
           "items": {
             "$ref": "#/definitions/ListOfLists"
           }
@@ -38,11 +38,11 @@
   "properties": {
     "title": {
       "type": "string",
-      "description": "Obertitel des Menüs"
+      "description": "Obertitel des Menus"
     },
     "menu": {
       "type": "array",
-      "description": "Menüpunkte mit Untermenüs",
+      "description": "Menüpunkte mit Untermenus",
       "items": {
         "$ref": "#/definitions/ListOfLists"
       }
