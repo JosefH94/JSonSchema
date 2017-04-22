@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "https://raw.githubusercontent.com/JosefH94/JSonSchema/master/MenuSchema.json",
   "title": "JSON Schema for Menu-JSON",
   "description": "Schema für das Erstellen von Menüs",
   "definitions": {
