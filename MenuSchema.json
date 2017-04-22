@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for Menu-JSON",
+  "description": "Schema für das Erstellen von Menüs",
+  "definitions": {
+    "ListOfLists": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title des Menüpunktes"
+        },
+        "link": {
+          "type": "string",
+          "default": null,
+          "description": "Routerlink"
+        },
+        "kindOfSub": {
+          "type": "string",
+          "default": null,
+          "description": "Vlt mal noch Enum, Dropdown, extend etc."
+        },
+        "lol": {
+          "type": "array",
+          "default": [],
+          "description": "Liste der Untermenüs",
+          "items": {
+            "$ref": "#/definitions/ListOfLists"
+          }
+        }
+      },
+      "required": [ "title" ]
+    }
+  },
+
+  "type": "array",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Obertitel des Menüs"
+    },
+    "menu": {
+      "type": "array",
+      "description": "Menüpunkte mit Untermenüs",
+      "items": {
+        "$ref": "#/definitions/ListOfLists"
+      }
+    }
+  },
+  "required": [ "menu", "title" ]
+}
